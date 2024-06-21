@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Platform, StatusBar, View } from 'react-native';
 
+
 function Screen(props) {
     return (
    <SafeAreaView style={[styles.screen, props.style]}>
