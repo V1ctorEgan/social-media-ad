@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 
 import { ImageBackground, Text, View, StyleSheet, Animated } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 
 import colors from '../../styles/colors';
 
@@ -35,7 +35,7 @@ function WelcomeScreen(props) {
                     <View style={styles.actionContainer}>
                         <Pagination data={data} scrollX={scrollX} index={index}/>
                         <PrgBtn1 title={'Get Started'} onPress={()=>{
-                            alert('hey hey');
+                            // router.navigate('auth/login');
                         }}/>
                         <FontText style={{color : colors.neutral100, fontWight:'600'}}>Already have an account?  <Link href={'/auth/login'} style={{color: colors.primary}}>Login</Link></FontText>
                     </View>

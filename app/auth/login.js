@@ -9,6 +9,8 @@ import {Input1} from "../../components/Input/input1";
 import { PrgBtn1 } from "../../components/buttons/progressButtons";
 
 import colors from "../../styles/colors";
+import { Link } from "expo-router";
+import SSA from "../../components/form/ssa";
 
 const Login = () =>{
     return(
@@ -22,6 +24,15 @@ const Login = () =>{
                         <Input1 title="Password" placeholder="Enter your password" />
                         <PrgBtn1 title="Login" />
                     </View>
+                    <View style={styles.options}>
+                        <Link href=""><FontText style={{
+                            color : colors.primary
+                        }}>Forgot password?</FontText></Link>
+                        <FontText>Don't have an account?  <Link href="auth/signUp" style={{
+                            color : colors.primary
+                        }}>Sign up</Link></FontText>
+                    </View>
+                    <SSA />
                 </View>
             </View>
         </Screen>
@@ -43,8 +54,12 @@ const styles = StyleSheet.create({
     formCore : {
         width : "100%",
         paddingHorizontal : 10,
-        marginVertical : 25,
+        marginVertical : 10,
         gap: 10
+    },
+    options : {
+        justifyContent : "center",
+        alignItems : "center",
     }
 })
 
