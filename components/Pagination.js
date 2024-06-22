@@ -1,6 +1,6 @@
-import { StyleSheet, Animated, View } from 'react-native'
+import { StyleSheet, Animated,  View } from 'react-native'
 import React from 'react'
-
+import { Dimensions } from 'react-native';
 
 
 const {width} = Dimensions.get('screen');

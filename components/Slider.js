@@ -1,8 +1,11 @@
-import { StyleSheet, Text, View,Dimensions, Animated } from 'react-native'
+import { StyleSheet, Text, View, Animated, ImageBackground } from 'react-native'
 import React from 'react'
 
+import AppButton from '../components/buttons/AppButton'
+import AccountQuestion from './AccountQuestion'
 
-const { width: windowWidth, height: windowHeight } = Dimensions.get("screen");
+
+// const { width: windowWidth, height: windowHeight } = Dimensions.get("screen");
 export default function Slider({item}) {
   
  
@@ -29,8 +32,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'flex-end',
         alignItems:'center',
-        width ,
-        height
+        
     },
     buttonContainer:{
         flex:1,
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
 
     },
     accountQuestion:{
-        color:colors.white
+        color:'#fff'
     }
 
 })

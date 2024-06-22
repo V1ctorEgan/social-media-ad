@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View, Animated } from 'react-native'
 import React, { useRef, useState } from 'react'
 import Slider from './Slider'
 import Pagination from './Pagination'
