@@ -1,13 +1,13 @@
 import User from '../config/user';
 
 import WelcomeScreen from "../screens/welcome/welcomeScreen";
-import Login from './auth/login';
+import Authenticate from '../screens/auth/authenticate';
 
 
 export default function Page() {
     if(User.Authenticated){
         return(
-            <Login /> // I will change this later to quick login
+            <Authenticate /> // I will change this later to quick login
         )
     }
     return <WelcomeScreen />;

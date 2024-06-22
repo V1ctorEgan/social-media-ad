@@ -9,7 +9,9 @@ import colors from '../styles/colors';
 function Screen(props) {
     SplashScreen.preventAutoHideAsync();
     const [fontsLoaded, fontError] = useFonts({
-        'plusJakataSans' : require('../assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf')
+        'plusJakataSans' : require('../assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf'),
+        'plusJakataSansBold' : require('../assets/fonts/plus-jakatar-sans/static/PlusJakartaSans-Bold.ttf'),
+        'plusJakataSansSemiBold' : require('../assets/fonts/plus-jakatar-sans/static/PlusJakartaSans-SemiBold.ttf')
     });
 
     const onLayoutRootView = useCallback(async () =>{
