@@ -3,9 +3,10 @@ import {SafeAreaView, StyleSheet, Platform, StatusBar, View } from 'react-native
 import { useFonts } from "expo-font";
 import * as SplashScreen from 'expo-splash-screen'
 
+import colors from '../styles/colors';
+
 
 function Screen(props) {
-
     SplashScreen.preventAutoHideAsync();
     const [fontsLoaded, fontError] = useFonts({
         'plusJakataSans' : require('../assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf')
@@ -31,8 +32,9 @@ function Screen(props) {
 }
 const styles = StyleSheet.create({
     screen:{
-        paddingTop: Platform.OS ==='android'? StatusBar.currentHeight : 0,
+        paddingTop: Platform.OS === 'android'? StatusBar.currentHeight : 0,
         flex : 1,
+        backgroundColor : colors.surfaceLight
     },
     view:{
         flex : 1,

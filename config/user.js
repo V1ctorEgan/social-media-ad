@@ -1,5 +1,5 @@
 const User = {
-    openedBefore : true
+    Authenticated : false
 }
 
 export default User;

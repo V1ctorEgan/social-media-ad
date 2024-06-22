@@ -16,15 +16,15 @@ const styles = StyleSheet.create({
         borderRadius:5,
         justifyContent: 'center',
         alignItems: 'center',
-        padding:15,
+        paddingVertical : 16,
+        paddingHorizontal : 12,
         width:'100%',
         marginVertical:10,
 
     },
     text: {
-        color: '#fff',
-        fontSize:18,
-        textTransform:'upperCase',
+        color : '#fff',
+        fontSize : 14,
         fontWeight:'800',
     }
 })
