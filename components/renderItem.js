@@ -7,6 +7,7 @@ function RenderItem({item}) {
             <Text style={styles.text}>{item.title}</Text>
             <Text style={styles.subTitle}>{item.subtitle} </Text>
             <Text style={styles.subTitle}>{item.sub}</Text>
+            <Text style={styles.subTitle}>{item.sub2}</Text>
          </View>
     );
 }
@@ -17,7 +18,8 @@ const styles = StyleSheet.create({
         height: 300,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor:'red'
+        flex:0.5
+        // backgroundColor:'red'
 
     },
     text:{

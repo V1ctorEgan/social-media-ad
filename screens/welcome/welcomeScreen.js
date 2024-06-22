@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
-import { ImageBackground, Text, View, StyleSheet } from 'react-native';
+import { ImageBackground, Text, View, StyleSheet, Animated } from 'react-native';
 import { Link } from 'expo-router';
 
 import colors from '../../styles/colors';
@@ -8,8 +8,13 @@ import colors from '../../styles/colors';
 import Screen from '../../components/Screen';
 import {PrgBtn1} from '../../components/buttons/progressButtons';
 import FontText from '../../components/texts/fontText';
-
+import Carousel from '../../components/Carousel';
+import Pagination from '../../components/Pagination';
+import data from '../../config/data';
 function WelcomeScreen(props) {
+    const [index, setIndex] = useState(0);
+
+    const scrollX = useRef(new Animated.Value(0)).current
     
     return (
        <Screen style={{
@@ -19,6 +24,7 @@ function WelcomeScreen(props) {
             <ImageBackground source={require("../../assets/images/backgrounds/bg1.png")} style={styles.background} imageStyle= {{opacity:.8}}>
                 <View style={styles.mainContainer}>
                     <View style={styles.carouselContainer}>
+                    <Carousel />
                         
                     </View>
                     {/* <View style={styles.lowerText}>
@@ -27,6 +33,7 @@ function WelcomeScreen(props) {
                         <FontText style={styles.subTitle}>presence effortlessly</FontText>
                     </View> */}
                     <View style={styles.actionContainer}>
+                        <Pagination data={data} scrollX={scrollX} index={index}/>
                         <PrgBtn1 title={'Get Started'} onPress={()=>{
                             alert('hey hey');
                         }}/>
