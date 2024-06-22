@@ -9,6 +9,7 @@ import { Input1 } from "../../components/Input/input1";
 import Screen from "../../components/Screen";
 import { PrgBtn1 } from "../../components/buttons/progressButtons";
 import colors from "../../styles/colors";
+import SSA from "../../components/form/ssa";
 
 function SignUp(props) {
 
@@ -54,11 +55,18 @@ function SignUp(props) {
 
                         </View>
                     </View>
+                    <SSA />
                 </View>
             </>
         )
     }
-
+    const Screen2 = () =>{
+        return(
+            <>
+            
+            </>
+        )
+    }
 	return (
 		<Screen>
 			<View style={styles.container}>
@@ -76,9 +84,11 @@ const styles = StyleSheet.create({
     check: {
 		flexDirection: "row",
 		marginHorizontal: 10,
+        marginLeft:0,
+        marginVertical:10
 	},
 	checkbox: {
-		borderColor: "blue",
+		borderColor: colors.primary,
 		borderRadius: 4,
 		width: 16,
 		height: 16,
