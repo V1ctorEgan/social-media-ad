@@ -2,26 +2,36 @@
   "expo": {
     "name": "social-media-ad",
     "slug": "social-media-ad",
+    "scheme": "asmt",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/splash/asm.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash/asm.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0073E6"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/splash/asm.png",
+        "backgroundColor": "#0073E6"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/images/splash/asm.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+            "fonts": ["./assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf"]
+        }
+    ]
+    ]
   }
 }
