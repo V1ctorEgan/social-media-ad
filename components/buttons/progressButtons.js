@@ -1,11 +1,12 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { TouchableOpacity, StyleSheet} from 'react-native';
 import colors from '../../styles/colors';
+import FontText from '../texts/fontText';
 
-function AppButton({title, color ='primary'}) {
+function PrgBtn1({title, color = colors.primary, onPress}) {
     return (
-        <TouchableOpacity style={[styles.button, {backgroundColor: colors[color]}]}>
-            <Text style={styles.text}>{title}</Text>
+        <TouchableOpacity style={[styles.button, {backgroundColor: color}]} activeOpacity={.8} onPress={onPress}>
+            <FontText style={styles.text}>{title}</FontText>
         </TouchableOpacity>
     );
 }
@@ -27,4 +28,6 @@ const styles = StyleSheet.create({
         fontWeight:'800',
     }
 })
-export default AppButton;
+export {
+    PrgBtn1
+}

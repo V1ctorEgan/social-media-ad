@@ -1,7 +1,11 @@
-import react from 'react';
-import { Text } from 'react-native';
+import FontText from '../components/texts/fontText';
+import Screen from '../components/Screen';
 
 
 export default function Page() {
-    return (<Text>Home page</Text>);
+    return (
+        <Screen>
+            <FontText>Eze is here</FontText>
+        </Screen>
+    )
 }

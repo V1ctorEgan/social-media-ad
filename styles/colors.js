@@ -1,5 +1,4 @@
-
-export default {
+const colors = {
     surfaceLight : "#FFFFFF",
     onSurfaceLight : "#101010",
 
@@ -68,3 +67,4 @@ export default {
     error100 : "#FFCAB9",
     error50 : "#FFEDE7",
 }
+export default colors;
