@@ -8,7 +8,7 @@ import colors from '../../styles/colors';
 import Screen from '../../components/Screen';
 import {PrgBtn1} from '../../components/buttons/progressButtons';
 import FontText from '../../components/texts/fontText';
-import Carousel from '../../components/Carousel';
+import Carousel from '../../components/welcome/Carousel';
 import Pagination from '../../components/Pagination';
 import data from '../../config/data';
 function WelcomeScreen(props) {

@@ -14,7 +14,7 @@ import OtpInputBox from "../../components/Input/otpBox";
 import OtpBox2 from "../../components/Input/otpBox2";
 
 function SignUp(props) {
-	const [prg, setPrg] = useState(1);
+	const [prg, setPrg] = useState(2);
 
 	const [isChecked, setChecked] = useState(false);
 
@@ -91,11 +91,26 @@ function SignUp(props) {
 			</View>
 		);
 	};
+	const Screen3 = () =>{
+		return(
+			<View style={[styles.main, styles.next]}> 
+				<FontText style={styles.text}>Create a Password</FontText>
+				<View style={styles.form}>
+				<Input1 title="Password" placeholder="Enter your password" />
+				<Input1 title="Confirm password" placeholder="Confirm your password" />
+				<PrgBtn1 title={'Continue'} />
+
+				</View>
+
+			</View>
+		)
+	}
 	return (
 		<Screen>
 			<View style={styles.container}>
 				{prg == 0 && <Screen1 />}
 				{prg == 1 && <Screen2 />}
+				{prg == 2 && <Screen3 />}
 			</View>
 		</Screen>
 	);
@@ -148,7 +163,7 @@ const styles = StyleSheet.create({
 		color: "#0073E6",
 	},
 	text: {
-		fontWeight: "600",
+		fontWeight: "650",
 		fontSize: 22,
 	},
 	text1: {

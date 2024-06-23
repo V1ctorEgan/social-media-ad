@@ -3,7 +3,7 @@ import { View, Dimensions, FlatList, Image, StyleSheet, Text, Animated} from 're
 
 import UpperText from './UpperText';
 import RenderItem from './renderItem';
-import data from '../config/data';
+import data from '../../config/data';
 
 // const data = [
 //   { id: 1, image: '../assets/images/backgrounds/bg1.png', title: 'Welcome To AMS', subtitle:'Take control of your social media', sub:'presence effortlessly'},
