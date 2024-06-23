@@ -169,11 +169,14 @@ const styles = StyleSheet.create({
 	text: {
 		fontWeight: "650",
 		fontSize: 22,
+		fontFamily:'plusJakataSansSemiBold'
 	},
 	text1: {
 		marginTop: 10,
         fontWeight:'650',
         fontSize:14,
+		fontFamily:'plusJakataSansSemiBold'
+
         
 		// backgroundColor:'blue'
 	},
