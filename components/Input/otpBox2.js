@@ -44,36 +44,7 @@ function OtpBox2(props) {
 	return (
 		<View style={styles.container}>
             {renderInputs()}
-			{/* <TextInput
-				style={styles.box}
-				maxLength={1}
-				keyboardType="numeric"
-			/>
-			<TextInput
-				style={styles.box}
-				maxLength={1}
-				keyboardType="numeric"
-			/>
-			<TextInput
-				style={styles.box}
-				maxLength={1}
-				keyboardType="numeric"
-			/>
-			<TextInput
-				style={styles.box}
-				maxLength={1}
-				keyboardType="numeric"
-			/>
-			<TextInput
-				style={styles.box}
-				maxLength={1}
-				keyboardType="numeric"
-			/>
-			<TextInput
-				style={styles.box}
-				maxLength={1}
-				keyboardType="numeric"
-			/> */}
+			
 		</View>
 	);
 }
@@ -103,7 +74,7 @@ const styles = StyleSheet.create({
 		width: "100%",
 		justifyContent: "space-between",
 		alignItems: "center",
-		paddingHorizontal: 5,
+		paddingHorizontal: 15,
 		paddingVertical: 20,
 	},
 });

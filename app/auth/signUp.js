@@ -10,11 +10,10 @@ import Screen from "../../components/Screen";
 import { PrgBtn1 } from "../../components/buttons/progressButtons";
 import colors from "../../styles/colors";
 import SSA from "../../components/form/ssa";
-import OtpInputBox from "../../components/Input/otpBox";
 import OtpBox2 from "../../components/Input/otpBox2";
 
 function SignUp(props) {
-	const [prg, setPrg] = useState(2);
+	const [prg, setPrg] = useState(0);
 
 	const [isChecked, setChecked] = useState(false);
 
@@ -50,7 +49,7 @@ function SignUp(props) {
 						<PrgBtn1
 							title={"Continue"}
 							onPress={() => {
-								setPrg(0);
+								setPrg(1);
 							}}
 						/>
 						<View style={styles.center}>
@@ -85,7 +84,7 @@ function SignUp(props) {
 				<View
 					style={{ width: "100%", flex: 1, paddingHorizontal:10,alignItems:'center'}}
 				>
-					<PrgBtn1 title={"Continue"} />
+					<PrgBtn1 title={"Continue"}  onPress={ ()=> setPrg(2)}/>
                     <FontText style={{color: colors.primary}}>Didn’t receive a code?</FontText>
 				</View>
 			</View>
@@ -98,7 +97,10 @@ function SignUp(props) {
 				<View style={styles.form}>
 				<Input1 title="Password" placeholder="Enter your password" />
 				<Input1 title="Confirm password" placeholder="Confirm your password" />
-				<PrgBtn1 title={'Continue'} />
+				<PrgBtn1 title={'Continue'} onPress={()=>{
+					alert('done')
+					setPrg(0)
+				}}/>
 
 				</View>
 
@@ -118,6 +120,8 @@ function SignUp(props) {
 const styles = StyleSheet.create({
 	box: {
 		// backgroundColor:'red'
+		width:'100%'
+
 	},
 	center: {
 		alignItems: "center",
@@ -148,7 +152,7 @@ const styles = StyleSheet.create({
 	main: {
 		flex: 4.3,
 		alignItems: "center",
-        flex:1,
+        // flex:1,
         width:'100%',
         // backgroundColor:'yellow'
 		// backgroundColor:'red'
