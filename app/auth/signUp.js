@@ -11,6 +11,7 @@ import { PrgBtn1 } from "../../components/buttons/progressButtons";
 import colors from "../../styles/colors";
 import SSA from "../../components/form/ssa";
 import OtpBox2 from "../../components/Input/otpBox2";
+import { router } from "expo-router";
 
 function SignUp(props) {
 	const [prg, setPrg] = useState(0);
@@ -98,8 +99,7 @@ function SignUp(props) {
 				<Input1 title="Password" placeholder="Enter your password" />
 				<Input1 title="Confirm password" placeholder="Confirm your password" />
 				<PrgBtn1 title={'Continue'} onPress={()=>{
-					alert('done')
-					setPrg(0)
+					router.navigate('auth/setUp')
 				}}/>
 
 				</View>

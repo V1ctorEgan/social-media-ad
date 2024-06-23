@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 
-import { ImageBackground, Text, View, StyleSheet, Animated } from 'react-native';
+import { ImageBackground, View, StyleSheet, Animated } from 'react-native';
 import { Link, router } from 'expo-router';
 
 import colors from '../../styles/colors';
@@ -9,8 +9,6 @@ import Screen from '../../components/Screen';
 import {PrgBtn1} from '../../components/buttons/progressButtons';
 import FontText from '../../components/texts/fontText';
 import Carousel from '../../components/welcome/Carousel';
-import Pagination from '../../components/Pagination';
-import data from '../../config/data';
 function WelcomeScreen(props) {
     const [index, setIndex] = useState(0);
 
@@ -33,7 +31,6 @@ function WelcomeScreen(props) {
                         <FontText style={styles.subTitle}>presence effortlessly</FontText>
                     </View> */}
                     <View style={styles.actionContainer}>
-                        <Pagination data={data} scrollX={scrollX} index={index}/>
                         <PrgBtn1 title={'Get Started'} onPress={()=>{
 
                             router.navigate('auth/signUp')

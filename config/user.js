@@ -1,5 +1,5 @@
 const User = {
-    Authenticated : true
+    Authenticated : false
 }
 
 export default User;
