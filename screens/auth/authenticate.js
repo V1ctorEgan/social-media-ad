@@ -40,7 +40,7 @@ const style = StyleSheet.create({
         alignItems : 'center',
         position : 'absolute',
         width : '100%',
-        bottom : 20
+        bottom : 0
     },
     head : {
         fontSize : 22,
