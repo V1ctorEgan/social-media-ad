@@ -24,6 +24,7 @@ const CustomKeypadForPin = (props) =>{
 
     useEffect(()=>{
         exportStack();
+        // console.log(stack);
     },[stack])
 
     const exportStack = () =>{
@@ -35,7 +36,9 @@ const CustomKeypadForPin = (props) =>{
     const pullStack = () =>{
         setStack(stack.length <= 0 ? stack : [...stack].slice(0,-1));
     }
-
+    const clearStack = () =>{
+        setStack([]);
+    }
     return (
         <View style={style.main}>
             <View style={style.col}>

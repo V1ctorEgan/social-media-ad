@@ -3,9 +3,9 @@ import { TouchableOpacity, StyleSheet} from 'react-native';
 import colors from '../../styles/colors';
 import FontText from '../texts/fontText';
 
-function PrgBtn1({title, color = colors.primary, onPress}) {
+function PrgBtn1({title, color = colors.primary, onPress, disabled = false}) {
     return (
-        <TouchableOpacity style={[styles.button, {backgroundColor: color}]} activeOpacity={.8} onPress={onPress}>
+        <TouchableOpacity style={[styles.button, {backgroundColor: disabled?colors.primary300:color, }]} activeOpacity={.8} onPress={disabled?()=>{}:onPress}>
             <FontText style={styles.text}>{title}</FontText>
         </TouchableOpacity>
     );

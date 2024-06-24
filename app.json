@@ -19,19 +19,40 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/splash/asm.png",
         "backgroundColor": "#0073E6"
-      }
+      },
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ],
+      "package": "com.capteze.socialmediaad"
     },
     "web": {
       "favicon": "./assets/images/splash/asm.png"
     },
     "plugins": [
-        "expo-router",
-        [
-            "expo-font",
-            {
-                "fonts": ["./assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf"]
-            }
-        ]
-    ]
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow ASM to use Face ID."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "697755c5-0299-4d35-a6f8-0c7fe38895ae"
+      }
+    }
   }
 }
