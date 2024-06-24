@@ -6,6 +6,8 @@ import Splash1 from '../components/splash/splash1';
 import User from '../config/user';
 import WelcomeScreen from "../screens/welcome/welcomeScreen";
 import Authenticate from '../screens/auth/authenticate';
+import SetUp from './auth/setUp';
+import Enable from './auth/enable';
 
 
 SplashScreen.preventAutoHideAsync();
