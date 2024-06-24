@@ -25,13 +25,13 @@
       "favicon": "./assets/images/splash/asm.png"
     },
     "plugins": [
-      "expo-router",
-      [
-        "expo-font",
-        {
-            "fonts": ["./assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf"]
-        }
-    ]
+        "expo-router",
+        [
+            "expo-font",
+            {
+                "fonts": ["./assets/fonts/plus-jakatar-sans/PlusJakartaSans.ttf"]
+            }
+        ]
     ]
   }
 }

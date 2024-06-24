@@ -26,7 +26,7 @@ function Screen(props) {
 
     return (
         <SafeAreaView style={[styles.screen, props.style]}>
-            <View style={[styles.view, props.ViewStyle]} onLayout={onLayoutRootView}>
+            <View style={[styles.view, props.viewStyle]} onLayout={onLayoutRootView}>
                 {props.children}
             </View >
         </SafeAreaView>
