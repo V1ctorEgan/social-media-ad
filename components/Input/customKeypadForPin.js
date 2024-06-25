@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { TouchableOpacity, View, StyleSheet } from "react-native";
 import FontText from "../texts/fontText";
 import { BackSpace, FingerPrintIcon } from "../svg/svgIcons";
+import biometric from "../../utils/biometric";
 const Btn = (props) =>{
     return(
         <TouchableOpacity onPress={props.onPress} activeOpacity={.5} style={style.btn}>
@@ -45,7 +46,11 @@ const CustomKeypadForPin = (props) =>{
                 <Btn txt={1} onPress={()=>{pushStack(1)}}/>
                 <Btn txt={4} onPress={()=>{pushStack(4)}}/>
                 <Btn txt={7} onPress={()=>{pushStack(7)}}/>
-                {props.fg && <BtnSvg svg={<FingerPrintIcon/>}/>}
+                {props.fg && <BtnSvg svg={<FingerPrintIcon/>} onPress={()=>{
+                    biometric.authenticate().then(data=>{
+                        props.onBiometric(data);
+                    })
+                }}/>}
             </View>
             <View style={style.col}>
                 <Btn txt={2} onPress={()=>{pushStack(2)}}/>
