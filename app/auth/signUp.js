@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
+import * as Yup from "yup";
 
 import { Link } from "expo-router";
 import Checkbox from "expo-checkbox";
@@ -12,6 +13,7 @@ import colors from "../../styles/colors";
 import SSA from "../../components/form/ssa";
 import OtpBox2 from "../../components/Input/otpBox2";
 import { router } from "expo-router";
+import FormValidation from "../../components/form/formValidation";
 
 function SignUp(props) {
 	const [prg, setPrg] = useState(0);
@@ -21,6 +23,21 @@ function SignUp(props) {
 	const handleToggle = () => {
 		setChecked(!isChecked);
 	};
+	const passwordSchema = Yup.string()
+  .min(8, 'Password must be at least 8 characters long')
+  .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/, 'Password must contain one lowercase, one uppercase, one number, and one special character')
+  .required('Password is required');
+
+const confirmPasswordSchema = Yup.string()
+  .oneOf([Yup.ref('password'), null], 'Passwords must match')
+  .required('Confirm password is required');
+
+	const validationSchema = Yup.object().shape({
+		email: Yup.string().required().email().label("Email"),
+		username: Yup.string().required().label("Username"),
+		password: passwordSchema,
+		confirmPassword: confirmPasswordSchema,
+	});
 
 	const Screen1 = () => {
 		return (
@@ -28,11 +45,17 @@ function SignUp(props) {
 				<FormHead />
 				<View style={styles.main}>
 					<FontText style={styles.text}>Create an Account</FontText>
+					<FormValidation
+					initialValues={{ email: "", username: "" }}
+					onSubmit={(values) => console.log(values)}
+					validationSchema={validationSchema}
+					>
 					<View style={styles.form}>
-						<Input1 title="Email" placeholder="Enter your email" />
+						<Input1 title="Email" placeholder="Enter your email" name="email"  />
 						<Input1
 							title="Username"
 							placeholder="Choose a username"
+							name= "username"
 						/>
 						<View style={styles.check}>
 							<Checkbox
@@ -67,6 +90,7 @@ function SignUp(props) {
 							</FontText>
 						</View>
 					</View>
+					</FormValidation>
 					<SSA />
 				</View>
 			</>
@@ -96,12 +120,15 @@ function SignUp(props) {
 			<View style={[styles.main, styles.next]}> 
 				<FontText style={styles.text}>Create a Password</FontText>
 				<View style={styles.form}>
-				<Input1 title="Password" placeholder="Enter your password" />
-				<Input1 title="Confirm password" placeholder="Confirm your password" />
+					<FormValidation initialValues={{ password: "", confirmPassword: "" }}
+					onSubmit={(values) => console.log(values)}
+					validationSchema={validationSchema}>
+				<Input1 title="Password" placeholder="Enter your password" name="password" />
+				<Input1 title="Confirm password" placeholder="Confirm your password" name="confirmPassword" />
 				<PrgBtn1 title={'Continue'} onPress={()=>{
 					router.navigate('auth/setUp')
 				}}/>
-
+				</FormValidation>
 				</View>
 
 			</View>
