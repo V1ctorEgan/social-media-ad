@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import * as Yup from "yup";
 import { View, StyleSheet } from "react-native";
 
 import Screen from "../../components/Screen";
@@ -11,8 +11,24 @@ import { PrgBtn1 } from "../../components/buttons/progressButtons";
 import colors from "../../styles/colors";
 import { Link } from "expo-router";
 import SSA from "../../components/form/ssa";
+import FormValidation from "../../components/form/formValidation";
 
 const Login = () =>{
+    const passwordSchema = Yup.string()
+  .min(8, 'Password must be at least 8 characters long')
+  .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/, 'Password must contain one lowercase, one uppercase, one number, and one special character')
+  .required('Password is required');
+
+const confirmPasswordSchema = Yup.string()
+  .oneOf([Yup.ref('password'), null], 'Passwords must match')
+  .required('Confirm password is required');
+
+	const validationSchema = Yup.object().shape({
+		email: Yup.string().required().email().label("Email"),
+		username: Yup.string().required().label("Username"),
+		password: passwordSchema,
+		confirmPassword: confirmPasswordSchema,
+	});
     return(
         <Screen>
             <View style={[styles.container]}>
@@ -20,9 +36,14 @@ const Login = () =>{
                 <View style={styles.main}>
                     <FontText style={styles.headText}>Login to your Account</FontText>
                     <View style={styles.formCore}>
-                        <Input1 title="Email" placeholder="Enter your email"/>
-                        <Input1 title="Password" placeholder="Enter your password" />
+                        <FormValidation
+                        initialValues={{ email: "", username: "" }}
+                        onSubmit={(values) => console.log(values)}
+                        validationSchema={validationSchema}>
+                        <Input1 title="Email" placeholder="Enter your email" name="email"  />
+                        <Input1 title="Password" placeholder="Enter your password" name="password"   />
                         <PrgBtn1 title="Login" />
+                        </FormValidation>
                     </View>
                     <View style={styles.options}>
                         <Link href=""><FontText style={{

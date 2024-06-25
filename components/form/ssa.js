@@ -9,7 +9,7 @@ const SSA = ({g,a}) =>{
             justifyContent : "center",
             alignItems : 'center',
             position : "absolute",
-            bottom : 35
+            bottom : 20
         }}>
             <FontText style={{
                 fontWeight : '650'
