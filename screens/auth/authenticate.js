@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { View, StyleSheet } from "react-native";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import Screen from "../../components/Screen";
@@ -37,8 +37,11 @@ const Authenticate = () =>{
 
     useEffect(()=>{
         if(authenticated){
-            console.log('Access Granted');
+            // console.log('Access Granted');
             alert('Congratulations! Beta User.\nOur dedicated team is diligently working on enhancing other aspects of the app.\n----------\nPlease stay tuned for further updates.\n----------\nYour feedback on your experience so far is welcome');
+            setTimeout(()=>{
+                router.replace('/home')
+            },500)
         }
         authenticate(false);
     },[authenticated]);
