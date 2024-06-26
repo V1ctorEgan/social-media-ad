@@ -6,10 +6,11 @@ export default () =>{
         <View style={{
             flex: 1,
             justifyContent : 'center',
-            alignContent : 'center',
-            backgroundColor : 'red'
+            alignItems : 'center',
         }}>
-            <FontText></FontText>
+            <FontText style={{
+                fontSize : 20
+            }}>Coming Soon</FontText>
         </View>
     );
 }

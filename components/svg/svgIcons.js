@@ -143,6 +143,45 @@ const NotificationBell = () => {
   );
 };
 
+const MenuOpenIcon = () => {
+  return (
+    <Svg xmlns="http://www.w3.org/2000/svg" width={22} height={14} fill="none">
+      <Path
+        stroke="#101010"
+        strokeLinecap="round"
+        strokeWidth={2}
+        d="M1 1h20M1 7h20M1 13h20"
+      />
+    </Svg>
+  );
+};
+
+const DocumentIcon = () => {
+  return (
+    <Svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none">
+      <Path
+        fill="#fff"
+        d="M15.8 2.21c-.41-.41-1.12-.13-1.12.44v3.49c0 1.46 1.24 2.67 2.75 2.67.95.01 2.27.01 3.4.01.57 0 .87-.67.47-1.07-1.44-1.45-4.02-4.06-5.5-5.54Z"
+      />
+      <Path
+        fill="#fff"
+        d="M20.5 10.19h-2.89c-2.37 0-4.3-1.93-4.3-4.3V3c0-.55-.45-1-1-1H8.07C4.99 2 2.5 4 2.5 7.57v8.86C2.5 20 4.99 22 8.07 22h7.86c3.08 0 5.57-2 5.57-5.57v-5.24c0-.55-.45-1-1-1Zm-9 7.56h-4c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75Zm2-4h-6c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75Z"
+      />
+    </Svg>
+  );
+};
+
+const ActiionPlusIcon = () => {
+  return (
+    <Svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none">
+      <Path
+        fill={colors.primary}
+        d="M14.19 0H5.81C2.17 0 0 2.17 0 5.81v8.37C0 17.83 2.17 20 5.81 20h8.37c3.64 0 5.81-2.17 5.81-5.81V5.81C20 2.17 17.83 0 14.19 0ZM16 10.75h-5.25V16c0 .41-.34.75-.75.75s-.75-.34-.75-.75v-5.25H4c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h5.25V4c0-.41.34-.75.75-.75s.75.34.75.75v5.25H16c.41 0 .75.34.75.75s-.34.75-.75.75Z"
+      />
+    </Svg>
+  );
+};
+
 export {
   FingerPrintIcon,
   BackSpace,
@@ -155,4 +194,7 @@ export {
   WalletIcon,
   DiscoverIcon,
   NotificationBell,
+  MenuOpenIcon,
+  DocumentIcon,
+  ActiionPlusIcon
 };
