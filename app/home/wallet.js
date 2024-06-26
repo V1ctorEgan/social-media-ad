@@ -49,12 +49,18 @@ export default () =>{
                         <CreatePostActionBtn text='Payment methods'/>
                         <TemplateActionBtn text='Schedule funds'/>
                     </View>
+                    <View style={{
+                        justifyContent:'center',
+                        alignItems:'center',
+                    }}>
+
                     <View style={styles.history}><FontText style={styles.size}>History</FontText><FontText style={styles.see}>See all</FontText></View>
 
                     <View style={styles.lowerContainer}>
                         {menuItems.map((item)=>(
                             <AccountFunded key={item.id} title={item.title} color={item.color} />
                             ))}
+                    </View>
                     </View>
                 </View>
                 
