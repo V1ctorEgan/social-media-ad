@@ -23,20 +23,20 @@ const Btn = (props) =>{
     )
 }
 
-const CreatePostActionBtn = () =>{
+const CreatePostActionBtn = ({text}) =>{
     return(
         <Btn bg={colors.primary50}>
             <ActiionPlusIcon />
-            <FontText style={{color:colors.primary, fontSize : 13,fontFamily : 'plusJakataSansBold'}}>Create post</FontText>
+            <FontText style={{color:colors.primary, fontSize : 13,fontFamily : 'plusJakataSansBold'}}>{text}</FontText>
         </Btn>
     )
 }
 
-const TemplateActionBtn = () =>{
+const TemplateActionBtn = ({text}) =>{
     return(
         <Btn bg={colors.primary}>
             <DocumentIcon />
-            <FontText style={{color:colors.surfaceLight, fontSize : 13,fontFamily : 'plusJakataSansBold'}}>Templates</FontText>
+            <FontText style={{color:colors.surfaceLight, fontSize : 13,fontFamily : 'plusJakataSansBold'}}>{text}</FontText>
         </Btn>
     )
 }

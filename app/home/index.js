@@ -82,8 +82,8 @@ export default () =>{
                         flexDirection : 'row',
                         gap : 10
                     }}>
-                        <CreatePostActionBtn />
-                        <TemplateActionBtn />
+                        <CreatePostActionBtn text='Create post'/>
+                        <TemplateActionBtn text='Templates'/>
                     </View>
                 </Section>
 
