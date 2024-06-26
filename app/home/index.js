@@ -117,7 +117,7 @@ const style = StyleSheet.create({
         alignItems : 'center',
     },
     body : {
-        gap : 10
+        gap : 20
     },
     section : {
         width : '100%',

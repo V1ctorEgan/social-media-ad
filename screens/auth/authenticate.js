@@ -41,7 +41,7 @@ const Authenticate = () =>{
             alert('Congratulations! Beta User.\nOur dedicated team is diligently working on enhancing other aspects of the app.\n----------\nPlease stay tuned for further updates.\n----------\nYour feedback on your experience so far is welcome');
             setTimeout(()=>{
                 router.replace('/home')
-            },500)
+            },300)
         }
         authenticate(false);
     },[authenticated]);

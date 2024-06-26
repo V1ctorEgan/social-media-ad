@@ -87,7 +87,8 @@ const style = StyleSheet.create({
     btn : {
         alignItems : 'center',
         justifyContent : 'center',
-        gap : 1
+        gap : 1,
+        paddingHorizontal : 15
     }
 });
 
