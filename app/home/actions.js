@@ -3,6 +3,7 @@ import { ActiionPlusIcon } from '../../components/svg/svgIcons';
 import FontText from '../../components/texts/fontText';
 import { View, StyleSheet} from 'react-native';
 import colors from '../../styles/colors';
+import { router } from 'expo-router';
 
 const Section = (props) =>{
     return(
@@ -27,7 +28,12 @@ export default () =>{
                     <TemplateActionBtn text={'Templates'} />
                 </View>
                 <View style={{flexDirection : 'row', gap : 10,   paddingTop:10 }}>
-                    <TemplateActionBtn text={'View'} />
+                    <TemplateActionBtn text={'View'} onPress={()=>{
+                        router.navigate('./templates')
+                        console.log('working')
+                    }
+                        
+                        }/>
                     <CreatePostActionBtn text={'Import'} />
                 </View>
                 <View style={{

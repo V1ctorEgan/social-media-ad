@@ -18,10 +18,20 @@ const AccountFunded = ({title, color}) => {
     </View>
      <View style={
         {
-            width:'100%',
-            height:1,
-            backgroundColor:'#000',
-            paddingVertical:5
+            // width:'90%',
+            // // height:0.2,
+            // backgroundColor:colors.neutral200,
+            // paddingVertical:5,
+            // height:.001,
+            // borderBottomColor: 'black',
+            // borderBottomWidth: StyleSheet.hairlineWidth,
+            borderWidth:.5,
+            paddingHorizontal:10,
+            // borderWidth: 2, // Adjust border thickness as needed
+            // borderStyle: 'dashed', // Any border style you prefer
+            borderColor: 'gray',
+            marginHorizontal: '5%'
+            
         }
      }></View>
     </>
@@ -36,16 +46,12 @@ const styles = StyleSheet.create({
         justifyContent:'space-between',
         alignItems:'center',
         gap:6,
-        width:365,
+        // width:340,
         paddingHorizontal:20,
         paddingVertical:10,
         // borderWidth:1
-        borderBottomColor:colors.neutral200,
-        borderBottomWidth:1,
-
-
-
-
+        // borderBottomColor:colors.neutral200,
+        // borderBottomWidth:1,
 
     },
     two:{
