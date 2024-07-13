@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import FontText from "../texts/fontText";
 import colors from "../../styles/colors";
 
-export default function ChangeButtonCon({ firstText, secondText, onPress, setChange }) {
+export default function ChangeButtonCon({ firstText, secondText, onPress, setChange, change }) {
 	const [color, setColor] = useState(colors.primary);
 	const [color2, setColor2] = useState(colors.neutral50);
-  const [here, setHere] = useState(false)
+  // const [here, setHere] = useState(false)
   const handleChange = ()=>{
-    setChange(!here)
+    setChange(!change)
+
   }
 	return (
 		<View style={[styles.container]}>
