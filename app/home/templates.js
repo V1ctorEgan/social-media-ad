@@ -1,8 +1,10 @@
-import { View, Text, StyleSheet, Dimensions, FlatList } from "react-native";
+import { View, Text, StyleSheet, Dimensions, FlatList, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import ChangeButtonCon from "../../components/home/changeButtonCon";
 import MenuButton from "../../components/home/menuButton";
 import FontText from "../../components/texts/fontText";
+import colors from "../../styles/colors";
+import { router } from "expo-router";
 
 const Online = () => {
 	const windowWidth = Dimensions.get("window").width;
@@ -105,11 +107,27 @@ const Local = () => {
 				flex: 1,
 				alignItems: "center",
         // flexDirection:'row',
+        position:'relative'
 
 			}}
 		>
 			<FontText>You have no local template. Click on the ‘+’ </FontText>
 			<FontText>icon to add a template</FontText>
+      <View style={{
+        backgroundColor:colors.primary,
+        width:48,
+        height:48,
+        borderRadius:24,
+        position:'absolute',
+        top:350,
+        left:250,
+        justifyContent:'center',
+        alignItems:'center'
+      }}>
+        <TouchableOpacity onPress={()=> router.navigate('./managePost')}>
+            <Text style={{color:'white', fontSize:24}}>+</Text>
+        </TouchableOpacity>
+      </View>
 		</View>
 	);
 };
