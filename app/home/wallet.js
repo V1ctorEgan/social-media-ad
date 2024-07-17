@@ -1,6 +1,7 @@
 import ChangeButtonCon from "../../components/home/changeButtonCon";
 import FontText from "../../components/texts/fontText";
 import { View, StyleSheet, FlatList } from "react-native";
+import { useState } from "react";
 
 import {
 	CreatePostActionBtn,
@@ -17,12 +18,15 @@ const menuItems = [
 	{ id: 4, title: "+$10.00", color: "red" },
 ];
 export default () => {
+    const [change, setChange] = useState(true);
 	return (
 		<View>
 			<View style={{ alignItems: "center" }}>
 				<ChangeButtonCon
 					firstText={"View balance"}
 					secondText={"see schedule funds"}
+                    setChange={setChange}
+                    change={change}
 				/>
 				<View style={styles.texty}>
 					<FontText style={{ fontSize: 12 }}>

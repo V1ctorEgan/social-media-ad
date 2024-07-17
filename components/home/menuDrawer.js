@@ -4,6 +4,7 @@ import {View, StyleSheet, TouchableOpacity, Animated, Dimensions, Image, BackHan
 import FontText from '../texts/fontText';
 import colors from '../../styles/colors';
 import { MenuCloseIcon, ProfileIcon, SettingsIcon, SendIcon, ToolsIcon, MoonIcon, HeadPhoneIcon, LogoutIcon, AngleRightIcon, ToggleOffIcon, ToggleOnIcon } from '../svg/svgIcons';
+import { router } from 'expo-router';
 
 
 const {width} = Dimensions.get('window');
@@ -92,6 +93,7 @@ const MenuDrawer = ({isOpen, onClose}) => {
                         title={'Settings'}
                         icon={<SettingsIcon />}
                         icon2={<AngleRightIcon />}
+                        onPress={()=> router.navigate('./../settings/setting')}
                     />
                     <MenuBtn 
                         title={'Published posts'}

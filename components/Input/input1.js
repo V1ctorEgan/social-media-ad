@@ -6,14 +6,14 @@ import ErrorMessage from './errorMessage';
 import { useEffect } from 'react';
 
 
-function Input1({title, placeholder, name}) {
+function Input1({title, placeholder, name, style}) {
     const { setFieldTouched, handleChange, errors, touched } =
 		useFormikContext();
          
     return (
-        <View style={{
+        <View style={[{
             gap : 5
-        }} >
+        },style]} >
             { title && <FontText style={{
                 color : colors.neutral900,
                 fontSize : 12,

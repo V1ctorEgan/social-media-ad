@@ -26,7 +26,7 @@ const Btn = (props) =>{
 
 const CreatePostActionBtn = ({text, onPress}) =>{
     return(
-        <Btn bg={colors.primary50} onPress={(onPress)}>
+        <Btn bg={colors.primary50} onPress={()=>router.navigate('../../settings/home')}>
             <ActiionPlusIcon />
             <FontText style={{color:colors.primary, fontSize : 13,fontFamily : 'plusJakataSansBold'}}>{text}</FontText>
         </Btn>

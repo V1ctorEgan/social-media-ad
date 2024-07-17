@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 import MenuDrawer from '../../components/home/menuDrawer';
 
@@ -8,6 +8,7 @@ import NotificationButton from '../../components/home/notificationButton';
 import MenuButton from '../../components/home/menuButton';
 import { CreatePostActionBtn, TemplateActionBtn } from '../../components/buttons/actionButtons';
 import colors from '../../styles/colors';
+import { router } from 'expo-router';
 
 
 

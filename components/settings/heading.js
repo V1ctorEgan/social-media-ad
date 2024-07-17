@@ -8,9 +8,12 @@ const Heading = ({title}) => {
   return (
     <View style={styles.container}>
         <View style={{
-            justifyContent:'flex-start',
+            // justifyContent:'flex-start',
             position:'absolute',
-            left:10
+            left:10,
+            justifyContent:'center',
+            alignItems:'center',
+            top:-1
 
         }}>
             <TouchableOpacity onPress={()=> router.navigate('../../home/templates')}>
@@ -32,14 +35,13 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         paddingHorizontal:10,
         width:'100%',
-        // borderWidth:2,
-        // alignSelf:'flex-start',
         alignItems:'center',
         position:'absolute',
         top:20
     },
     text:{
         fontSize:22,
-        fontWeight:'650'
+        fontWeight:'650',
+        top: -10
     }
 })
