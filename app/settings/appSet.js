@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Heading from '../../components/settings/heading'
 import { MenuBtn, Section } from '../../components/settings/un'
-import { AngleRightIcon, NotificationBell, ToggleOnIcon } from '../../components/svg/svgIcons'
+import { AngleRightIcon, LampOn, NotificationBell, ToggleOnIcon } from '../../components/svg/svgIcons'
 import FontText from '../../components/texts/fontText'
 
 const appSet = () => {
@@ -13,7 +13,7 @@ const appSet = () => {
 
       <Section style={styles.sec}>
         <MenuBtn title={'Allow notifications for updates'} icon2={<ToggleOnIcon /> } icon={<NotificationBell />} />
-        <MenuBtn title={'Allow notifications for something'} icon2={<ToggleOnIcon /> } icon={<NotificationBell />} />
+        <MenuBtn title={'Allow notifications for something'} icon2={<ToggleOnIcon /> } icon={<LampOn />} />
       </Section>
       <FontText style={styles.text} >Language</FontText>
       <Section>

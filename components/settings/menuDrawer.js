@@ -4,7 +4,7 @@ import {View, StyleSheet, TouchableOpacity, Animated, Dimensions, Image, BackHan
 import FontText from '../../components/texts/fontText';
 import colors from '../../styles/colors';
 import { router } from 'expo-router';
-import { MenuCloseIcon, ProfileIcon, SettingsIcon, SendIcon, ToolsIcon, MoonIcon, HeadPhoneIcon, LogoutIcon, AngleRightIcon, ToggleOffIcon, ToggleOnIcon } from '../../components/svg/svgIcons';
+import { MenuCloseIcon, ProfileIcon, SettingsIcon, SendIcon, ToolsIcon, MoonIcon, HeadPhoneIcon, LogoutIcon, AngleRightIcon, ToggleOffIcon, ToggleOnIcon, ProfileSettings, AppSetings, WalletSettings, PrivacySetting } from '../../components/svg/svgIcons';
 
 const {width} = Dimensions.get('window');
 
@@ -76,26 +76,26 @@ const MenuDrawer = ({isOpen, onClose}) => {
             <Section>
                     <MenuBtn 
                         title={'Profile Settings'}
-                        icon={<ProfileIcon />}
+                        icon={<ProfileSettings />}
                         icon2={<AngleRightIcon />}
                         onPress={()=> router.navigate('./../settings/editProfile')}
                     />
                     <MenuBtn 
                         title={'App settings & preferences'}
-                        icon={<SettingsIcon />}
+                        icon={<AppSetings />}
                         icon2={<AngleRightIcon />}
                         onPress={()=> router.navigate('./../settings/appSet')}
                     />
                     <MenuBtn 
                         title={'Wallet settings'}
-                        icon={<SendIcon />}
+                        icon={<WalletSettings />}
                         icon2={<AngleRightIcon />}
                         onPress={()=> router.navigate('./../settings/walletS')}
 
                     />
                     <MenuBtn 
                         title={'Privacy & security'}
-                        icon={<ToolsIcon />}
+                        icon={<PrivacySetting />}
                         icon2={<AngleRightIcon />}
                         onPress={()=> router.navigate('./../settings/privacy')}
                     />

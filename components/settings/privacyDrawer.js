@@ -4,7 +4,7 @@ import {View, StyleSheet, TouchableOpacity, Animated, Dimensions, Image, BackHan
 import FontText from '../../components/texts/fontText';
 import colors from '../../styles/colors';
 import { router } from 'expo-router';
-import { MenuCloseIcon, ProfileIcon, SettingsIcon, SendIcon, ToolsIcon, MoonIcon, HeadPhoneIcon, LogoutIcon, AngleRightIcon, ToggleOffIcon, ToggleOnIcon } from '../../components/svg/svgIcons';
+import { MenuCloseIcon, ProfileIcon, SettingsIcon, SendIcon, ToolsIcon, MoonIcon, HeadPhoneIcon, LogoutIcon, AngleRightIcon, ToggleOffIcon, ToggleOnIcon, CloseACcount, FingerPrintIcon } from '../../components/svg/svgIcons';
 
 const {width} = Dimensions.get('window');
 
@@ -88,12 +88,12 @@ const PrivacyDrawer = ({isOpen, onClose}) => {
                     />
                     <MenuBtn 
                         title={'Fingerprint'}
-                        icon={<SendIcon />}
+                        icon={<FingerPrintIcon />}
                         icon2={<AngleRightIcon />}
                     />
                     <MenuBtn 
                         title={'Close my account'}
-                        icon={<ToolsIcon />}
+                        icon={<CloseACcount />}
                         icon2={<AngleRightIcon />}
                          
                     />

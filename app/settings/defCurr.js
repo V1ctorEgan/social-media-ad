@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import Heading from "../../components/settings/heading";
 import { MenuBtn, Section } from "../../components/settings/un";
-import { AngleRightIcon } from "../../components/svg/svgIcons";
+import { AngleRightIcon, Ticked } from "../../components/svg/svgIcons";
 import FontText from "../../components/texts/fontText";
 import { router } from "expo-router";
 import colors from "../../styles/colors";
@@ -63,7 +63,7 @@ const defCurr = () => {
 						setClick3(false);
 						setClick4(false);
 					}}
-					icon2={<AngleRightIcon />}
+					icon2={<Ticked />}
 					click1={click1}
 				/>
 				<Curr
@@ -75,7 +75,7 @@ const defCurr = () => {
 						setClick3(false);
 						setClick4(false);
 					}}
-					icon2={<AngleRightIcon />}
+					icon2={<Ticked />}
 					click1={click2}
 				/>
 				<Curr
@@ -87,7 +87,7 @@ const defCurr = () => {
 						setClick1(false);
 						setClick4(false);
 					}}
-					icon2={<AngleRightIcon />}
+					icon2={<Ticked />}
 					click1={click3}
 				/>
 				<Curr
@@ -99,7 +99,7 @@ const defCurr = () => {
 						setClick3(false);
 						setClick1(false);
 					}}
-					icon2={<AngleRightIcon />}
+					icon2={<Ticked />}
 					click1={click4}
 				/>
 			</Section>

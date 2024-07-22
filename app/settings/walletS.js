@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Heading from '../../components/settings/heading'
 import { MenuBtn, Section } from '../../components/settings/un'
-import { AngleRightIcon } from '../../components/svg/svgIcons'
+import { AngleRightIcon, DefaultCurrency } from '../../components/svg/svgIcons'
 import FontText from '../../components/texts/fontText'
 import { router } from 'expo-router'
 
@@ -12,7 +12,7 @@ const walletS = () => {
        <Heading title={'Wallet settings'} />
        <FontText style={styles.text}>Currency</FontText>
        <Section  >
-            <MenuBtn title={'Default currency'} icon2={<AngleRightIcon />} onPress={()=> router.navigate('./defCurr')}/>
+            <MenuBtn icon={<DefaultCurrency />} title={'Default currency'} icon2={<AngleRightIcon />} onPress={()=> router.navigate('./defCurr')}/>
        </Section>
        <FontText style={styles.text}>Payment</FontText>
 
